@@ -1,8 +1,8 @@
 Feature: Create account of facebook100
 As a user you need to open facebook home page and do the validations
 
-Scenario:
-Given User need to be on facebook login page101
+Scenario: Validate create user multiple fields1011
+Given User need to be on facebook login page
 When User enter user "David" first name
 Then User checks user "David" first name is present
 Then close browser
