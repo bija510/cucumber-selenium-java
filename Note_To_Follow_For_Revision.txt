@@ -18,3 +18,6 @@
 ==> Com.basic.multiSD --------------> 9th
 
 ==> Com.basic.sharedataSD ----------> 10th
+
+
+To Run from Pom.XML--> R-click-->Run as --> 6 Maven Test-->all will Run-->07-28-2020

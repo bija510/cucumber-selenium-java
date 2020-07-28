@@ -30,7 +30,7 @@ public class ShareDataStepDef {
 	}
 	@When("^User enter user \"([^\"]*)\" first name$")
 	public void user_enter_user_first_name(String userName) throws InterruptedException {
-		driver.findElement(By.xpath("//input[@id='u_0_f']")).sendKeys(userName);
+		driver.findElement(By.xpath("//input[@id='u_0_m']")).sendKeys(userName);
         Thread.sleep(1000);
 	} 
 	

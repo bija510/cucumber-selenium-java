@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ShareClass {
 
@@ -14,7 +15,7 @@ public class ShareClass {
 	public WebDriver setup() {
 		
 		if(driver==null) {
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\Bijaya Chhetri\\eclipse-workspace\\CucumberAuto\\driver\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		
 		}

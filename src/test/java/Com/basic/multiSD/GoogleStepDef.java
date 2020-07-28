@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GoogleStepDef {
 
@@ -13,7 +14,7 @@ WebDriver driver=null;
 	
 	@Given("^User need to be on google page$")     //^ and $ so that it will match exactly with feature file
 	public void user_need_to_be_on_google_page(){
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Bijaya Chhetri\\eclipse-workspace\\CucumberAuto\\driver\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 	  }
