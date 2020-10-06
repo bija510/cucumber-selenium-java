@@ -6,7 +6,6 @@ Scenario Outline: Validate create user multiple fields21
 Given User need to be on facebook login page
 When User enter user "<user>" first name
 And User enter user "<lastname>" lastname
-Then User checks user "<user>" first name is present
 Then User mobile fields should be blank
 Then close browser
 

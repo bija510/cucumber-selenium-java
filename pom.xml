@@ -12,12 +12,13 @@
     <artifactId>selenium-java</artifactId>
     <version>3.141.5</version>
 </dependency>
-  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
-    <groupId>info.cukes</groupId>
+    <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
-    <version>1.2.5</version>
+    <version>6.6.0</version>
 </dependency>
+  
   <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 <dependency>
     <groupId>info.cukes</groupId>

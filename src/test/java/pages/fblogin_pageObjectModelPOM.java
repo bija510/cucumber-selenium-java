@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class fblogin_pageObjectModelPOM {
-	WebDriver Driver;
+	WebDriver driver;
 
-	public fblogin_pageObjectModelPOM(WebDriver Driver) {
-		this.Driver = Driver;
+	public fblogin_pageObjectModelPOM(WebDriver driver) {
+		this.driver = driver;
 		
-		if(!Driver.getTitle().equals("Facebook - Log In or Sign Up")){
-			throw new IllegalStateException("---Not a facebook login page---"+ Driver.getCurrentUrl());
+		if(!driver.getTitle().equals("Facebook - Log In or Sign Up")){
+			throw new IllegalStateException("---Not a facebook login page---"+ driver.getCurrentUrl());
 		}
 	}
 		
@@ -21,17 +21,17 @@ public class fblogin_pageObjectModelPOM {
 	
 	
 	public void inputuserName(String userName) {
-		WebElement userNameTxt = Driver.findElement(userNameTxt_xpath);
+		WebElement userNameTxt = driver.findElement(userNameTxt_xpath);
 		userNameTxt.sendKeys(userName);
 	}
 
 	public void inputPassword(String password) {
-		WebElement passwordTxt = Driver.findElement(passwordTxt_xpath);
+		WebElement passwordTxt = driver.findElement(passwordTxt_xpath);
 		passwordTxt.sendKeys(password);
 	}
 
 	public void clickLoginBtn() {
-		WebElement loginBtn = Driver.findElement(loginBtn_xpath);
+		WebElement loginBtn = driver.findElement(loginBtn_xpath);
 		loginBtn.click();
 	}
 }

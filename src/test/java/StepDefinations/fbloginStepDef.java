@@ -14,18 +14,18 @@ public class fbloginStepDef extends BaseUtil{
 		this.base = base;
 	}
 	
-	fblogin_pageObjectModelPOM fbpage; //Just Comment This so Page Factory design will work viceVersa
-	//fblogin_pageFactory fbpage;	
+	//fblogin_pageObjectModelPOM fbpage; //Just Comment This so Page Factory design will work viceVersa
+	fblogin_pageFactory fbpage;	
 	
 	@Given("^User is in the facebook login page$")
 	public void user_is_in_the_facebook_login_page() {
-	    base.Driver.get("https://www.facebook.com");	    
+	    base.driver.get("https://www.facebook.com");	    
 	}
 
 	@And("^User enter user name$")
 	public void user_enter_user_name() {
-		fbpage = new fblogin_pageObjectModelPOM(base.Driver); //Just Comment This so Page Factory design will work viceVersa
-		//fbpage = new fblogin_pageFactory(base.Driver);
+		//fbpage = new fblogin_pageObjectModelPOM(base.driver); //Just Comment This so Page Factory design will work viceVersa
+		fbpage = new fblogin_pageFactory(base.driver);
 		fbpage.inputuserName("Admin");
 	}
 

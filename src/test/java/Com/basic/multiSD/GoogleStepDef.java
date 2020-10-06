@@ -21,7 +21,7 @@ WebDriver driver=null;
 	@When("^User enters search string$")
 	public void User_enters_search_string() {
      driver.findElement(By.xpath("//input[@name='q']")).sendKeys("selenium");
-	
+	driver.quit();
    } 
     }
  

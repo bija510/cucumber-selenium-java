@@ -44,30 +44,30 @@ public class Hook extends BaseUtil{
 
 		if(browserName.equalsIgnoreCase("CHROME")) {
 			WebDriverManager.chromedriver().setup();
-			base.Driver = new ChromeDriver();
+			base.driver = new ChromeDriver();
 
 		}else if(browserName.equalsIgnoreCase("FIREFOX")) {
 			WebDriverManager.firefoxdriver().setup();
-			base.Driver = new FirefoxDriver();
+			base.driver = new FirefoxDriver();
 
 		}else if(browserName.equalsIgnoreCase("IE")) {
 			WebDriverManager.iedriver().setup();
-			base.Driver = new InternetExplorerDriver();
+			base.driver = new InternetExplorerDriver();
 			
 		}else if(browserName.equalsIgnoreCase("EDGE")) {
 			WebDriverManager.edgedriver().setup();
-			base.Driver = new EdgeDriver();
+			base.driver = new EdgeDriver();
 		}
-		base.Driver.manage().window().maximize();
-		base.Driver.manage().timeouts().implicitlyWait(9, TimeUnit.SECONDS);
+		base.driver.manage().window().maximize();
+		base.driver.manage().timeouts().implicitlyWait(9, TimeUnit.SECONDS);
 	}
 	
 	@After
 	public void teardown(Scenario scenario) throws IOException {
 		if (scenario.isFailed()) {
-			File src = ((TakesScreenshot) base.Driver).getScreenshotAs(OutputType.FILE);
+			File src = ((TakesScreenshot) base.driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(src, new File("../CucumberAuto/Screenshots/" + "Failed_" + scenario.getName() + ".png"));		
 		}
-		base.Driver.quit();
+		base.driver.quit();
 	}
 }

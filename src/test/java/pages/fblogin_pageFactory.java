@@ -6,11 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class fblogin_pageFactory {
-	WebDriver Driver;
+	WebDriver driver;
 
-	public fblogin_pageFactory(WebDriver Driver) {
-		this.Driver = Driver;
-		PageFactory.initElements(Driver, this); //This is new
+	public fblogin_pageFactory(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this); //This is new
 	}
 	
 	@FindBy(xpath ="//input[@id='email']")
