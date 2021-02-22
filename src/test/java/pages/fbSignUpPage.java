@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,13 +15,13 @@ public class fbSignUpPage {
 	}
 	
 	@FindBy(css ="input[id='u_0_n']")
-	WebElement FirstNametxtBx;
+	private WebElement FirstNametxtBx;
 	
 	@FindBy(css ="input[id='u_0_p']")
-	WebElement lastNameTxt;
+	private WebElement lastNameTxt;
 
 	@FindBy(css ="input[id='u_0_s']")
-	WebElement mobileNumTxt;
+	private WebElement mobileNumTxt;
 	
 	public void setFirstName(String firstName) {
 		FirstNametxtBx.sendKeys(firstName);

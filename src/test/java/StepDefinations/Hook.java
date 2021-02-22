@@ -22,13 +22,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Hook extends BaseUtil{
 
-	private BaseUtil base;
+	// NOTE:- BaseUtil = ClassName,  base = private Variable
+	// Cannot declare [WebDriver driver] in this class so we declare in another class
+	private BaseUtil base; 
 	
 	public Hook(BaseUtil base) {
 		this.base = base;
 	}
 	
 	public Properties prop ;
+	
 	@Before
 	public void InitializeTest() throws IOException{
 		/***********************************************

@@ -14,13 +14,13 @@ public class fblogin_pageFactory {
 	}
 	
 	@FindBy(xpath ="//input[@id='email']")
-	WebElement userNameTxt;
+	private WebElement userNameTxt;
 	
 	@FindBy(xpath ="//input[@id='pass']")
-	WebElement passwordTxt;
+	private WebElement passwordTxt;
 	
 	@FindBy(xpath = "//button[@id='u_0_b']")
-	WebElement loginBtn;
+	private WebElement loginBtn;
 	
 	
 	public void inputuserName(String userName) {

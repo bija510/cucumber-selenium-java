@@ -6,7 +6,7 @@ Feature: Demo feature to demonstrate cucumber 5
       | admin    | [blank]  |
     And I have a few books in hand such as java, js, csharp
     Given some more information
-      """
+      """Json
       {   
        "Name"   :"David",
        "Address": "PA",
