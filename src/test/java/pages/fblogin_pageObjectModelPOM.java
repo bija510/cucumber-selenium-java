@@ -17,7 +17,7 @@ public class fblogin_pageObjectModelPOM {
 		
 	private By userNameTxt_xpath = By.xpath("//input[@id='email']");
 	private By passwordTxt_xpath = By.xpath("//input[@id='pass']");
-	private By loginBtn_xpath = By.xpath("//button[@id='u_0_b']");
+	private By loginBtn_xpath = By.xpath("//button[normalize-space()='Log In']");
 	
 	
 	public void inputuserName(String userName) {

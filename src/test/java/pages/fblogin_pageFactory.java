@@ -19,7 +19,7 @@ public class fblogin_pageFactory {
 	@FindBy(xpath ="//input[@id='pass']")
 	private WebElement passwordTxt;
 	
-	@FindBy(xpath = "//button[@id='u_0_b']")
+	@FindBy(xpath = "//button[normalize-space()='Log In']")
 	private WebElement loginBtn;
 	
 	
